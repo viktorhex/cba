@@ -15,6 +15,18 @@ impl PresentValue {
             net: cashflow.net() * discount_factor.value()
         })
     }
+
+    pub fn discount_factor(&self) -> DiscountFactor {
+        self.discount_factor
+    }
+
+    pub fn cashflow(&self) -> Cashflow {
+        self.cashflow
+    }
+
+    pub fn net(&self) -> USD {
+        self.net
+    }
 }
 
 #[cfg(test)]
